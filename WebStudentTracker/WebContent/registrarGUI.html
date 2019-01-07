@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Index Page</title>
+  </head>
+  <style media="screen">
+    .optionButton{
+      width: 50%;
+      padding: 20px;
+      color: white;
+      background-color: lightgreen;
+      border: 5px solid none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <center>
+      <br><br><br><br><br><br><br><br>
+      
+      <form action="StudentControllerServlet" method="get">
+      	<input type = "hidden" name = "command" value = "SEARCH">
+      	<input type = "text" placeholder = "Enter UserId..." name = "searchId"><br>
+        <input class = "optionButton" type="submit" name="search" value="SEARCH A STUDENT">
+      </form>
+      
+      <p>OR</p>
+      
+      <form action="StudentControllerServlet" method="get">
+      	<input type = "hidden" name = "command" value = "ADD">
+        <input class = "optionButton" type="submit" name="ADD" value="ADD A STUDENT">
+      </form>
+      
+      <p>OR</p>
+      
+      <form action="StudentControllerServlet" method="get">
+      	<input type = "hidden" name = "command" value = "UPDATE">
+      	<input type = "text" placeholder = "Enter UserId..." name = "updateId"><br>
+        <input class = "optionButton" type="submit" name="UPDATE" value="UPDATE A STUDENT">
+      </form>
+      <p>OR</p>
+      
+      <form action="StudentControllerServlet" method="get">
+      	<input type = "hidden" name = "command" value = "DELETE">
+      	<input type = "text" placeholder = "Enter UserId..." name = "deleteId"><br>
+        <input class = "optionButton" type="submit" name="DELETE" value="DELETE A STUDENT">
+      </form>
+      
+    </center >
+    
+  </body>
+</html>

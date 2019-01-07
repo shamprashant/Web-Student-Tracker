@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Index Page</title>
+  </head>
+  <style media="screen">
+
+  </style>
+  <script type="text/javascript">
+    function checkFields(){
+      var uname = document.login.uname.value;
+      var pass = document.login.pass.value;
+      if (uname == "" || pass == ""){
+        alert("You cannot leave both field empty");
+        return false;
+      }
+      if (uname != "prashant" && pass != "root"){
+    	  alert("Check your UserName and Password");
+    	  return false;
+      }
+    }
+  </script>
+  <body>
+    <center>
+      <br><br><br><br><br><br><br><br>
+        <form name="login" method="get" onsubmit="return checkFields()">
+       	  <input type = "hidden" name = "command" value = "A-LOGIN">
+          <label for="uname">UserName: </label>
+          <input type="text" name="uname" value="">
+
+          <label for="pass">Enter Password: </label>
+          <input type="password" name="pass" value="">
+
+          <input type="submit" name="submit" value="LOGIN">
+        </form>
+    </center >
+  </body>
+</html>

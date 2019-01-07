@@ -1,0 +1,27 @@
+<head>
+<body>
+<h1>Welcome Admin!</h1>
+<br><br><br><br><br><br><br><br><br><br>
+<center>
+	<form action = "StudentControllerServlet" method = "post">
+		<input type = "hidden" name = "command" value = "ALL">
+		<input type = "submit" value = "ALL STUDENTS">
+	</form>
+	<form action = "StudentControllerServlet" method = "post">
+		<input type = "hidden" name = "command" value = "UNPAID">
+		<input type = "submit" value = "UNPAID STUDENTS">
+	</form>
+	<form action = "StudentControllerServlet" method = "post">
+		<input type = "hidden" name = "command" value = "SELECTION">
+		<select name = "SELECTION">
+			<option value = "JAVA">JAVA</option>
+			<option value = "C">C</option>
+			<option value = "PYTHON">PYTHON</option>
+			<option value = "PHP">PHP</option>
+		</select>
+		<br>
+		<input type = "submit" value = "SELECT COURSE">
+	</form>
+</center>
+</body>
+</head>
